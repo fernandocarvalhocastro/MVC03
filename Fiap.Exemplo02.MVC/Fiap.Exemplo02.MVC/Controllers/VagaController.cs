@@ -14,7 +14,7 @@ namespace Fiap.Exemplo02.MVC.Controllers
         // GET: Vaga
         [HttpGet]
         public ActionResult Cadastrar()
-        {
+        {  
             CarregarLista();
             return View();
         }

@@ -15,13 +15,6 @@
     </tr>
         @foreach (var v in Model)
         {
-            <tr>
-                <td>@v.Cargo</td>
-                <td>@v.Descricao</td>
-                <td>@v.Salario</td>
-                <td>@v.ValeRefeicao</td>
-                <td>@v.Nivel</td>
-            </tr>
-          
+            @Html.Partial("_linhaTabela", v);
         }
 </table>
