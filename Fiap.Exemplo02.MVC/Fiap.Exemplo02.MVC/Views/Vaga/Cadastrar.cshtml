@@ -4,13 +4,8 @@
     ViewBag.Title = "Vaga";
 }
 
-@if (ViewBag.msg != null)
-{
-    <div class="alert alert-success alert-dismissable fade in">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>@ViewBag.msg</strong>
-    </div>
-}
+ @Helper.Mensagem(ViewBag.msg,"sucesso")
+
 
 <h2>Cadastrar</h2>
 
@@ -37,6 +32,6 @@
         @Html.DropDownListFor(v=> v.Nivel, (SelectList)ViewBag.opcoes, "Selecione..." ,new {@class="form-control"})
     </div>
     <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Cadastrar" />
+        @Helper.Submit("Cadastrar")
     </div>
 }
